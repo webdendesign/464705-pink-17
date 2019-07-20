@@ -1,0 +1,148 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .effect {
+    display: block;
+    margin-top: 68px;
+
+    &__wrapper {
+      position: relative;
+      min-height: 300px;
+      padding-left: 315px;
+      padding-top: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 238px;
+        height: 276px;
+        background-image: url("../img/icon-timer.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 56px;
+        left: 19px;
+        width: 202px;
+        height: 202px;
+        background-image: url("../img/icon-editor-diagram-fill.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+
+    &__time {
+      position: absolute;
+      margin: 0;
+      top: 100px;
+      left: 68px;
+      width: 106px;
+      height: 70px;
+      font-size: 98px;
+      font-weight: bold;
+      color: @cl-red;
+    }
+
+    &__header {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px;
+      padding-right: 125px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 24px;
+      color: @cl-red;
+      text-decoration: underline;
+
+      &:focus {
+        outline: 3px solid pink;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .effect {
+    display: block;
+    margin-top: 0;
+    background-color: @bg-light;
+
+    &__wrapper {
+      min-height: 320px;
+      margin: 0;
+      padding-left: 365px;
+      padding-top: 98px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 298px;
+        height: 345px;
+        background-image: url("../img/icon-timer.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 73px;
+        left: 24px;
+        width: 253px;
+        height: 253px;
+        background-image: url("../img/icon-editor-diagram-fill.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+
+    &__time {
+      margin: 0;
+      top: 123px;
+      left: 80px;
+      width: 131px;
+      height: 87px;
+      font-size: 120px;
+    }
+
+    &__header {
+      margin-bottom: 25px;
+      padding: 0;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+      padding: 0;
+      padding-right: 48px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__link {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

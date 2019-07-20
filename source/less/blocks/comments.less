@@ -1,0 +1,153 @@
+.comments {
+  background-color: @bg-white;
+  text-align: center;
+
+  &__wrapper {
+    background-color: @bg-white;
+  }
+
+  &__arrow {
+    display: none;
+  }
+
+  &__list {
+    .list();
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__effect {
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__description {
+    display: none;
+  }
+}
+
+.comments__item:nth-child(2),
+.comments__item:nth-child(3) {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .comments {
+    &__item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      order: 2;
+      margin: 0;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__effect {
+      order: 1;
+      font-size: 18px;
+    }
+
+    &__description {
+      display: block;
+      order: 3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments {
+    &__arrow {
+      display: block;
+      position: relative;
+      .list();
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 430px;
+
+        width: 79px;
+        height: 64px;
+        background-image: url("../img/icon-quotes.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+
+    &__left,
+    &__right {
+      position: absolute;
+      top: 140px;
+
+      width: 22px;
+      height: 42px;
+      fill: #bec2c7;
+
+      cursor: pointer;
+    }
+
+    &__left {
+      left: 0;
+    }
+
+    &__right {
+      right: 0;
+    }
+
+    &__left:hover,
+    &__right:hover {
+      fill: #7e868f;
+    }
+
+    &__left:active,
+    &__right:active {
+      fill: #e9ebec;
+    }
+
+    &__item {
+      margin-top: 72px;
+      padding-top: 110px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      order: 2;
+    }
+
+    &__name {
+      order: -1;
+    }
+
+    &__effect {
+      margin: 0;
+      margin-bottom: 35px;
+    }
+
+    &__description {
+      display: block;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  .comments__item:nth-child(2),
+  .comments__item:nth-child(3) {
+    display: none;
+  }
+}

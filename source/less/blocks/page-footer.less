@@ -1,0 +1,157 @@
+.page-footer {
+  position: relative;
+  z-index: 1;
+  background-color: @bg-white;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 244px;
+    margin-top: -284px;
+    padding: 20px 0;
+  }
+
+  &__desktop {
+    display: none;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    width: 147px;
+    height: 40px;
+
+    &:focus {
+      outline: 3px solid pink;
+    }
+  }
+
+  &__logo:hover path {
+    fill: @cl-red;
+  }
+
+  &__logo:active .page-footer__mobile--text path {
+    fill: @bg-dark;
+    opacity: 0.2;
+  }
+
+  &__logo:active .page-footer__mobile--glasses path {
+    fill: @cl-red;
+    opacity: 0.2;
+  }
+
+  &__social {
+    margin: 0 auto;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin-right: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__link {
+    width: 27px;
+    height: 34px;
+
+    &:focus {
+      outline: 3px solid pink;
+    }
+  }
+
+  &__icon-htmlacademy {
+    width: 27px;
+    height: 34px;
+    fill: @cl-red;
+  }
+
+  &__icon-htmlacademy:hover {
+    fill: @bg-dark;
+  }
+
+  &__icon-htmlacademy:active {
+    opacity: 0.2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    position: relative;
+    z-index: 2;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: -128px;
+      min-height: 128px;
+      padding: 0;
+    }
+
+    &__logo {
+      margin: 0;
+      margin-top: 40px;
+    }
+
+    &__social {
+      margin: 0;
+      margin-top: 45px;
+    }
+
+    &__copyright {
+      margin: 0;
+      margin-top: 53px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    &__wrapper {
+      margin-top: -197px;
+      min-height: 197px;
+    }
+
+    &__logo {
+      margin-top: 66px;
+      margin-right: 20px;
+    }
+
+    &__mobile {
+      display: none;
+    }
+
+    &__desktop {
+      display: block;
+    }
+
+    &__logo:active .page-footer__desktop--text path {
+      fill: @bg-dark;
+      opacity: 0.2;
+    }
+
+    &__logo:active .page-footer__desktop--glasses path {
+      fill: @cl-red;
+      opacity: 0.2;
+    }
+
+    &__social {
+      margin-top: 70px;
+    }
+
+    &__copyright {
+      margin-top: 81px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
