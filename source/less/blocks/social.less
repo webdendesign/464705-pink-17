@@ -1,0 +1,30 @@
+.social {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 173px;
+    .list();
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #dddfe0;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      border-color: @bg-dark;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+}

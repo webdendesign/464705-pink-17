@@ -1,0 +1,68 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/OpenSans.woff2") format("woff2"), url("../fonts/OpenSans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/OpenSansBold.woff2") format("woff2"), url("../fonts/OpenSansBold.woff") format("woff");
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @bg-dark;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: @bg-white;
+}
+
+.container {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 620px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 940px;
+    padding: 0 130px;
+  }
+}
