@@ -1,10 +1,6 @@
 .main-nav {
   position: relative;
   z-index: 2;
-  font-size: 18px;
-  line-height: 32px;
-  color: @bg-white;
-  text-transform: uppercase;
   text-align: center;
 
   &__container {
@@ -16,14 +12,6 @@
 
   &__list {
     .list();
-  }
-
-  &__item a {
-    font-family: inherit;
-    font-size: 18px;
-    line-height: 32px;
-    text-transform: uppercase;
-    text-align: center;
   }
 
   &__toggle {
@@ -117,12 +105,12 @@
     z-index: 1;
   }
 
-  .main-nav--opened .main-nav__wrapper::before {
-    display: block;
-  }
-
   .main-nav--nojs .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
   }
 }
 
@@ -135,22 +123,11 @@
     .main-nav__toggle {
       top: -65px;
     }
-
-    &__item {
-      font-size: 18px;
-      line-height: 32px;
-      text-align: center;
-    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    font-size: 18px;
-    line-height: 18px;
-    text-transform: none;
-    text-align: center;
-
     &__wrapper {
       width: 620px;
     }

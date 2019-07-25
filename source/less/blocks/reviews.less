@@ -3,7 +3,7 @@
     position: relative;
     min-height: 240px;
     margin-top: -70px;
-    background-color: #283645;
+    background-color: @bg-dark;
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
@@ -28,7 +28,7 @@
   &__intro {
     padding-top: 97px;
     font-size: 24px;
-    color: #ffffff;
+    color: @bg-white;
     font-weight: lighter;
     line-height: auto;
     text-align: center;
@@ -53,8 +53,8 @@
     padding: 5px 20px;
     font-size: 12px;
     line-height: 24px;
-    color: #ffffff;
-    font-weight: bold;
+    color: @bg-white;
+    font-weight: 700;
     background-color: @cl-red;
     text-transform: uppercase;
   }
@@ -104,20 +104,21 @@
 
   &__container {
     position: relative;
+    margin-top: -3px;
     margin-bottom: 20px;
   }
 
   &__description-panorama {
     margin-top: 1px;
     padding: 20px 20px;
-    background-color: #f2f2f2;
+    background-color: @bg-light;
   }
 
   &__description {
     min-height: 80px;
     margin-top: -4px;
     padding: 20px 20px;
-    background-color: #f2f2f2;
+    background-color: @bg-light;
   }
 
   &__author-name {
@@ -133,8 +134,7 @@
     display: inline;
     font-size: 12px;
     line-height: 24px;
-    font-weight: 100;
-    color: #283645;
+    font-weight: 300;
     text-transform: uppercase;
   }
 
@@ -143,6 +143,7 @@
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 24px;
+    font-weight: 400;
   }
 
   &__like {
@@ -151,8 +152,9 @@
     margin: 0;
     padding-left: 35px;
     font-size: 12px;
+    font-weight: 400;
     text-transform: uppercase;
-    color: #d22856;
+    color: @cl-red;
   }
 
   &__like::before {
@@ -203,6 +205,10 @@
       top: 55px;
     }
 
+    &__container {
+      margin-top: -2px;
+    }
+
     &__description-panorama {
       padding: 27px 27px;
     }
@@ -225,11 +231,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      background-color: #ffffff;
+      background-color: @bg-white;
     }
 
     &__item {
-      background-color: #f2f2f2;
+      background-color: @bg-light;
     }
 
     &__image img {
@@ -333,7 +339,6 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
-      background-color: #ffffff;
     }
 
     &__item {
