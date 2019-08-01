@@ -1,36 +1,35 @@
-.site-list {
-  &__item {
-    display: flex;
-    justify-content: center;
-    background-color: @bg-dark;
-    border-top: 1px solid black;
-  }
+.site-list__item {
+  display: flex;
+  justify-content: center;
+  background-color: @bg-dark;
+  border-top: 1px solid black;
 
-  &__item:last-child {
+  &:last-child {
     border-bottom: 1px solid black;
   }
+}
 
-  &__link {
-    display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 18px;
-    line-height: 32px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: @bg-white;
-    background-color: @bg-dark;
-    border: none;
-    outline: none;
+.site-list__link {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: @bg-white;
+  background-color: @bg-dark;
+  border: none;
+  outline: none;
 
-    &:hover,
-    &:focus {
-      color: @cl-red;
-    }
+  &:hover,
+  &:focus {
+    color: @cl-red;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -41,18 +40,18 @@
     justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 24px;
+  }
 
-    &__item {
-      border-top: none;
-      border-bottom: none;
-      background-color: transparent;
-    }
+  .site-list__item {
+    border-top: none;
+    border-bottom: none;
+    background-color: transparent;
 
-    &__item--active {
+    &--active {
       position: relative;
     }
 
-    &__item--active::before {
+    &--active::before {
       position: absolute;
       content: "";
       bottom: 0;
@@ -62,15 +61,15 @@
       background-color: @bg-white;
     }
 
-    &__item:last-child {
+    &:last-child {
       border-bottom: none;
     }
+  }
 
-    &__link {
-      line-height: 18px;
-      background-color: transparent;
-      font-weight: 400;
-      text-transform: none;
-    }
+  .site-list__link {
+    line-height: 18px;
+    background-color: transparent;
+    font-weight: 400;
+    text-transform: none;
   }
 }

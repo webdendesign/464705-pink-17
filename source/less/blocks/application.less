@@ -24,12 +24,12 @@
     top: 0;
     background: rgba(0, 0, 0, 0.3);
   }
+}
 
-  &__wrapper {
-    position: relative;
-  }
+.application__wrapper {
+  position: relative;
 
-  &__wrapper::before {
+  &::before {
     content: "";
     position: absolute;
     width: 258px;
@@ -45,72 +45,74 @@
       background-size: 258px auto;
     }
   }
+}
 
-  &__title {
-    display: none;
+.application__title {
+  display: none;
+}
+
+.application__download {
+  padding-top: 520px;
+  padding-bottom: 30px;
+}
+
+.application__button {
+  padding: 10px 35px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    background: #ffffff;
+    color: @cl-red;
+    outline: none;
   }
 
-  &__download {
-    padding-top: 520px;
-    padding-bottom: 30px;
+  &:active {
+    color: #f1becc;
   }
+}
 
-  &__button {
-    padding: 10px 35px;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: bold;
-    border: 3px solid #ffffff;
-    border-radius: 50px;
+.application__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0;
+  width: 210px;
+  height: 60px;
+  list-style: none;
+}
 
-    &:hover,
-    &:focus {
-      background: #ffffff;
-      color: @cl-red;
-      outline: none;
-    }
+.application__item {
+  position: relative;
+  width: 50px;
 
-    &:active {
-      color: #f1becc;
-    }
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 0;
-    width: 210px;
-    height: 60px;
-    list-style: none;
-  }
-
-  &__item {
-    position: relative;
-    width: 50px;
-  }
-
-  &__item a:focus {
-    outline: 3px solid pink;
-  }
-
-  &__item--android {
+  &--android {
     padding-top: 9px;
   }
 
-  &__item--microsoft {
+  &--microsoft {
     padding-top: 13px;
   }
+}
 
-  &__slogan {
-    margin: 0;
-    padding: 0;
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: lighter;
+.application__item a {
+  &:focus {
+    outline: 3px solid pink;
   }
+}
+
+.application__slogan {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: lighter;
 }
 
 @media (min-width: @tablet-width) {
@@ -129,12 +131,10 @@
     &::before {
       height: 110px;
     }
+  }
 
-    &__wrapper {
-      position: relative;
-    }
-
-    &__wrapper::before {
+  .application__wrapper {
+    &::before {
       content: "";
       position: absolute;
       width: 700px;
@@ -150,38 +150,39 @@
         background-size: 700px auto;
       }
     }
+  }
 
-    &__download {
-      position: relative;
-      width: 300px;
-      padding-top: 205px;
-    }
+  .application__download {
+    position: relative;
+    width: 300px;
+    padding-top: 205px;
+  }
 
-    &__title {
-      display: block;
-      margin: 0;
-      margin-bottom: 50px;
-      font-size: 40px;
-      line-height: auto;
-      font-weight: lighter;
-      color: #ffffff;
-    }
+  .application__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: auto;
+    font-weight: lighter;
+    color: #ffffff;
+  }
 
-    &__button {
-      padding: 13px 45px;
-    }
+  .application__button {
+    padding: 13px 45px;
+  }
 
-    &__list {
-      margin-top: 65px;
-      padding: 0 10px;
-    }
+  .application__list {
+    margin-top: 65px;
+    padding: 0 10px;
+  }
 
-    &__slogan {
-      margin-top: 40px;
-      font-size: 18px;
-    }
+  .application__slogan {
+    margin-top: 40px;
+    font-size: 18px;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .application {
@@ -196,8 +197,10 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
+  }
 
-    &__wrapper::before {
+  .application__wrapper {
+    &::before {
       content: "";
       position: absolute;
       width: 1050px;
@@ -213,28 +216,28 @@
         background-size: 1050px auto;
       }
     }
+  }
 
-    &__title {
-      margin-bottom: 72px;
-      font-size: 50px;
-      line-height: 59px;
-    }
+  .application__title {
+    margin-bottom: 72px;
+    font-size: 50px;
+    line-height: 59px;
+  }
 
-    &__download {
-      padding-top: 220px;
-    }
+  .application__download {
+    padding-top: 220px;
+  }
 
-    &__button {
-      padding: 10px 28px;
-      font-size: 21px;
-    }
+  .application__button {
+    padding: 10px 28px;
+    font-size: 21px;
+  }
 
-    &__list {
-      margin-top: 82px;
-    }
+  .application__list {
+    margin-top: 82px;
+  }
 
-    &__slogan {
-      margin-top: 55px;
-    }
+  .application__slogan {
+    margin-top: 55px;
   }
 }
