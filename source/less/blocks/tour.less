@@ -1,23 +1,23 @@
 .tour {
   margin-bottom: 284px;
   background-color: @bg-white;
+}
 
-  &__header {
-    position: relative;
-    margin-top: -70px;
-    min-height: 240px;
-    background-color: @bg-dark;
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center 0;
+.tour__header {
+  position: relative;
+  margin-top: -70px;
+  min-height: 240px;
+  background-color: @bg-dark;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-mobile@2x.jpg");
-      background-size: 320px auto;
-    }
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 320px auto;
   }
 
-  &__header::before {
+  &::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -27,378 +27,384 @@
     top: 0;
     background: rgba(0, 0, 0, 0.3);
   }
+}
 
-  &__slogan {
-    padding-top: 100px;
-    font-size: 24px;
-    color: @bg-white;
-    font-weight: 300;
-    line-height: 28px;
-    text-align: center;
+.tour__slogan {
+  padding-top: 100px;
+  font-size: 24px;
+  color: @bg-white;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+}
+
+.tour__text {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.tour__please {
+  display: none;
+}
+
+.tour__people,
+.tour__make,
+.tour__device,
+.tour__address {
+  .list();
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.tour__people-item,
+.tour__address-item {
+  margin-bottom: 15px;
+}
+
+.tour__man input,
+.tour__down input {
+  margin-top: 5px;
+  padding: 0 20px;
+  width: 232px;
+  height: 59px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid @bg-light;
+  cursor: pointer;
+}
+
+.tour__people-item label {
+  cursor: pointer;
+}
+
+.tour__people-item input:hover,
+.tour__address-item input:hover {
+  border-color: @bg-dark;
+}
+
+.tour__people-item input:active,
+.tour__people-item input:focus,
+.tour__address-item input:active,
+.tour__address-item input:focus {
+  border-color: @cl-red;
+  outline: none;
+}
+
+.tour__progress input {
+  border: none;
+}
+
+.tour__man,
+.tour__down,
+.tour__emotion {
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 40px;
+  width: 280px;
+}
+
+.tour__man,
+.tour__container-down {
+  position: relative;
+}
+
+.tour__progress,
+.tour__app {
+  margin: 0 auto;
+  padding: 0;
+  background-color: @bg-light;
+}
+
+.tour__down {
+  margin-top: 40px;
+}
+
+.tour__family,
+.tour__name,
+.tour__patronymic {
+  margin-left: 22px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @cl-red;
+  text-transform: uppercase;
+}
+
+.tour__container-progress,
+.tour__container-app {
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
+  border: none;
+}
+
+.tour__container-emotion,
+.tour__container-down,
+.tour__man {
+  padding: 0;
+  border: none;
+}
+
+.tour__contact-address {
+  display: none;
+}
+
+.tour__journey,
+.tour__write {
+  margin: auto;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 18px;
+  color: @cl-red;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tour__journey {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.tour__make-item {
+  height: 39px;
+  margin-bottom: 39px;
+}
+
+.tour__device-item {
+  height: 39px;
+  margin-bottom: 35px;
+}
+
+.tour__device-item label,
+.tour__make-item label {
+  cursor: pointer;
+}
+
+.tour__make-item .sharks-checkbox,
+.tour__make-item .beach-checkbox,
+.tour__make-item .chaki-checkbox,
+.tour__make-item .souvenirs-checkbox,
+.tour__make-item .turret-checkbox,
+.tour__make-item .otel-checkbox {
+  position: relative;
+  padding-left: 59px;
+}
+
+.tour__progress input[type="checkbox"] + .input-checkbox::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.tour__progress input[type="checkbox"]:focus + .input-checkbox::before,
+.tour__progress input[type="checkbox"]:hover + .input-checkbox::before {
+  border-color: @bg-dark;
+}
+
+.tour__progress input[type="checkbox"]:active + .input-checkbox::before {
+  border-color: @cl-red;
+}
+
+.tour__progress input[type="checkbox"] + .input-checkbox::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 22px;
+  height: 10px;
+  border-left: 2px solid @cl-red;
+  border-bottom: 2px solid @cl-red;
+  transform: rotate(-45deg);
+}
+
+.tour__progress input[type="checkbox"]:checked + .input-checkbox::after {
+  display: inline-block;
+}
+
+.tour__phone,
+.tour__email {
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @cl-red;
+  text-transform: uppercase;
+}
+
+.tour__device-item .ios-checkbox,
+.tour__device-item .android-checkbox,
+.tour__device-item .windows-checkbox {
+  position: relative;
+  padding-left: 60px;
+}
+
+.tour__app input[type="radio"] + .input-checkbox::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.tour__app input[type="radio"]:focus + .input-checkbox::before,
+.tour__app input[type="radio"]:hover + .input-checkbox::before {
+  border-color: @bg-dark;
+}
+
+.tour__app input[type="radio"]:active + .input-checkbox::before {
+  border-color: @cl-red;
+}
+
+.tour__app input[type="radio"] + .input-checkbox::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  background: @cl-red;
+  border-radius: 50%;
+}
+
+.tour__app input[type="radio"]:checked + .input-checkbox::after {
+  display: inline-block;
+}
+
+.tour__emotion {
+  margin-bottom: 45px;
+}
+
+.tour__write {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+.tour__emotion textarea {
+  padding: 15px 20px 25px 20px;
+  width: 236px;
+  height: 157px;
+  border: 2px solid @bg-light;
+  font-size: 18px;
+  line-height: 30px;
+
+  &:focus {
+    outline: 3px solid pink;
   }
+}
 
-  &__text {
-    margin: 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-  }
+.tour__send {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 20px;
+}
 
-  &__please {
-    display: none;
-  }
+.tour__btn {
+  height: 59px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @bg-white;
+  background-color: #2aab6d;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 
-  &__people,
-  &__make,
-  &__device,
-  &__address {
-    .list();
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  &__people-item,
-  &__address-item {
-    margin-bottom: 15px;
-  }
-
-  &__man input,
-  &__down input {
-    margin-top: 5px;
-    padding: 0 20px;
-    width: 232px;
-    height: 59px;
-    font-size: 18px;
-    line-height: 30px;
-    border: 2px solid #f2f2f2;
-    cursor: pointer;
-  }
-
-  &__people-item label {
-    cursor: pointer;
-  }
-
-  &__people-item input:hover,
-  &__address-item input:hover {
-    border-color: @bg-dark;
-  }
-
-  &__people-item input:active,
-  &__people-item input:focus,
-  &__address-item input:active,
-  &__address-item input:focus {
-    border-color: @cl-red;
-    outline: none;
-  }
-
-  &__progress input {
-    border: none;
-  }
-
-  &__man,
-  &__down,
-  &__emotion {
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 40px;
-    width: 280px;
-  }
-
-  &__man,
-  &__container-down {
-    position: relative;
-  }
-
-  &__progress,
-  &__app {
-    margin: 0 auto;
-    padding: 0;
-    background-color: @bg-light;
-  }
-
-  &__down {
-    margin-top: 40px;
-  }
-
-  &__family,
-  &__name,
-  &__patronymic {
-    margin-left: 22px;
-    font-size: 14px;
-    line-height: 30px;
-    color: @cl-red;
-    text-transform: uppercase;
-  }
-
-  &__container-progress,
-  &__container-app {
-    margin: 0 auto;
-    padding: 0;
-    width: 280px;
-    border: none;
-  }
-
-  &__container-emotion,
-  &__container-down,
-  &__man {
-    padding: 0;
-    border: none;
-  }
-
-  &__contact-address {
-    display: none;
-  }
-
-  &__journey,
-  &__write {
-    margin: auto;
-    padding: 0 20px;
-    font-size: 14px;
-    line-height: 18px;
-    color: @cl-red;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  &__journey {
-    margin-top: 35px;
-    margin-bottom: 35px;
-  }
-
-  &__make-item {
-    height: 39px;
-    margin-bottom: 39px;
-  }
-
-  &__device-item {
-    height: 39px;
-    margin-bottom: 35px;
-  }
-
-  &__device-item label,
-  &__make-item label {
-    cursor: pointer;
-  }
-
-  &__make-item .sharks-checkbox,
-  &__make-item .beach-checkbox,
-  &__make-item .chaki-checkbox,
-  &__make-item .souvenirs-checkbox,
-  &__make-item .turret-checkbox,
-  &__make-item .otel-checkbox {
-    position: relative;
-    padding-left: 59px;
-  }
-
-  &__progress input[type="checkbox"] + .input-checkbox::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #e5e5e5;
+  &--error,
+  &--successfully {
+    width: 276px;
     border-radius: 2px;
   }
 
-  &__progress input[type="checkbox"]:focus + .input-checkbox::before,
-  &__progress input[type="checkbox"]:hover + .input-checkbox::before {
-    border-color: @bg-dark;
-  }
-
-  &__progress input[type="checkbox"]:active + .input-checkbox::before {
-    border-color: @cl-red;
-  }
-
-  &__progress input[type="checkbox"] + .input-checkbox::after {
-    display: none;
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 8px;
-    width: 22px;
-    height: 10px;
-    border-left: 2px solid @cl-red;
-    border-bottom: 2px solid @cl-red;
-    transform: rotate(-45deg);
-  }
-
-  &__progress input[type="checkbox"]:checked + .input-checkbox::after {
-    display: inline-block;
-  }
-
-  &__phone,
-  &__email {
-    margin-left: 20px;
-    font-size: 14px;
-    line-height: 30px;
-    color: #d22856;
-    text-transform: uppercase;
-  }
-
-  &__device-item .ios-checkbox,
-  &__device-item .android-checkbox,
-  &__device-item .windows-checkbox {
-    position: relative;
-    padding-left: 60px;
-  }
-
-  &__app input[type="radio"] + .input-checkbox::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #e5e5e5;
-    border-radius: 50%;
-  }
-
-  &__app input[type="radio"]:focus + .input-checkbox::before,
-  &__app input[type="radio"]:hover + .input-checkbox::before {
-    border-color: @bg-dark;
-  }
-
-  &__app input[type="radio"]:active + .input-checkbox::before {
-    border-color: @cl-red;
-  }
-
-  &__app input[type="radio"] + .input-checkbox::after {
-    display: none;
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 12px;
-    width: 14px;
-    height: 14px;
-    background: @cl-red;
-    border-radius: 50%;
-  }
-
-  &__app input[type="radio"]:checked + .input-checkbox::after {
-    display: inline-block;
-  }
-
-  &__emotion {
-    margin-bottom: 45px;
-  }
-
-  &__write {
-    margin-top: 35px;
-    margin-bottom: 10px;
-  }
-
-  &__emotion textarea {
-    padding: 15px 20px 25px 20px;
-    width: 236px;
-    height: 157px;
-    border: 2px solid #f2f2f2;
-    font-size: 18px;
-    line-height: 30px;
-
-    &:focus {
-      outline: 3px solid pink;
-    }
-  }
-
-  &__send {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-
-  &__btn {
-    height: 59px;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #2aab6d;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-  }
-
-  &__send--btn {
-    margin-bottom: 30px;
-    width: 280px;
-    height: 59px;
-    border-radius: 2px;
-  }
-
-  &__btn:hover,
-  &__btn:focus {
+  &:hover,
+  &:focus {
     background-color: #1c9b5e;
     outline: none;
   }
 
-  &__btn:active {
+  &:active {
     color: #61b98f;
   }
+}
 
-  &__legend {
-    margin: 0;
-    font-size: 14px;
-    line-height: 30px;
-    text-transform: uppercase;
-  }
+.tour__send--btn {
+  margin-bottom: 30px;
+  width: 280px;
+  height: 59px;
+  border-radius: 2px;
+}
 
-  &__sup {
-    font-size: 20px;
-    color: #d22856;
-  }
+.tour__legend {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
 
-  &__legend--text {
-    display: none;
-  }
+.tour__sup {
+  font-size: 20px;
+  color: @cl-red;
+}
 
-  &__error,
-  &__successfully {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    text-align: center;
-    background-color: #ffffff;
-  }
+.tour__legend--text {
+  display: none;
+}
 
-  // &__error,
-  // &__successfully {
-  //   display: block;
-  // }
+.tour__error,
+.tour__successfully {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  background-color: @bg-white;
+}
 
-  &__error {
-    bottom: -710px;
-    left: -20px;
-    width: 280px;
-    min-height: 199px;
-    padding: 40px 20px 50px 20px;
-    box-shadow: 0 5px 20px #dfdfdf;
-  }
+// .tour__error,
+// .tour__successfully {
+//   display: block;
+// }
 
-  &__badly {
-    margin: 0 40px 30px 40px;
-  }
+.tour__error {
+  bottom: -710px;
+  left: -20px;
+  width: 280px;
+  min-height: 199px;
+  padding: 40px 20px 50px 20px;
+  box-shadow: 0 5px 20px #dfdfdf;
+}
 
-  &__fail {
-    margin: 0;
-    margin-bottom: 39px;
-    font-size: 14px;
-    line-height: 24px;
-  }
+.tour__badly {
+  margin: 0 40px 30px 40px;
+}
 
-  &__successfully {
-    bottom: -385px;
-    left: -20px;
-    width: 280px;
-    min-height: 290px;
-    padding: 40px 20px 50px 20px;
-    box-shadow: 0 5px 20px #dfdfdf;
-  }
+.tour__fail {
+  margin: 0;
+  margin-bottom: 39px;
+  font-size: 14px;
+  line-height: 24px;
+}
 
-  &__successfully::before {
+.tour__successfully {
+  bottom: -385px;
+  left: -20px;
+  width: 280px;
+  min-height: 290px;
+  padding: 40px 20px 50px 20px;
+  box-shadow: 0 5px 20px #dfdfdf;
+
+  &::before {
     position: absolute;
     z-index: -1;
     content: "";
@@ -408,192 +414,174 @@
     height: 163px;
     background: #f2f2f2;
   }
+}
 
-  &__good {
-    margin: 0;
-    margin-bottom: 30px;
-  }
+.tour__good {
+  margin: 0;
+  margin-bottom: 30px;
+}
 
-  &__luck {
-    margin: 0 10px 80px 10px;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  &__btn--error,
-  &__btn--successfully {
-    width: 276px;
-    border-radius: 2px;
-  }
+.tour__luck {
+  margin: 0 10px 80px 10px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 @media (min-width: @tablet-width) {
   .tour {
     margin-bottom: 127px;
+  }
 
-    &__header {
-      margin-top: -110px;
-      min-height: 440px;
-      background-image: url("../img/bg-back-tablet@1x.jpg");
+  .tour__header {
+    margin-top: -110px;
+    min-height: 440px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/bg-back-tablet@2x.jpg");
-        background-size: 1200px auto;
-      }
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
     }
 
     &__header::before {
       height: 110px;
     }
+  }
 
-    &__slogan {
-      padding-top: 180px;
-      font-size: 50px;
-      line-height: 60px;
-    }
+  .tour__slogan {
+    padding-top: 180px;
+    font-size: 50px;
+    line-height: 60px;
+  }
 
-    &__text {
-      padding: 80px 50px 70px 50px;
-      font-size: 18px;
-    }
+  .tour__text {
+    padding: 80px 50px 70px 50px;
+    font-size: 18px;
+  }
 
-    &__please {
-      display: inline-block;
-    }
+  .tour__please {
+    display: inline-block;
+  }
 
-    &__form {
-      display: flex;
-      flex-direction: column;
-    }
+  .tour__form {
+    display: flex;
+    flex-direction: column;
+  }
 
-    &__man {
-      order: 1;
-    }
+  .tour__man {
+    order: 1;
+  }
 
-    &__progress {
-      order: 4;
-      margin-bottom: 52px;
-    }
+  .tour__progress {
+    order: 4;
+    margin-bottom: 52px;
+  }
 
-    &__down {
-      order: 3;
-    }
+  .tour__down {
+    order: 3;
+  }
 
-    &__app {
-      order: 2;
-      margin-bottom: 50px;
-      background-color: #ffffff;
-    }
+  .tour__app {
+    order: 2;
+    margin-bottom: 50px;
+    background-color: @bg-white;
+  }
 
-    &__emotion {
-      order: 5;
-    }
+  .tour__emotion {
+    order: 5;
+  }
 
-    &__send {
-      order: 6;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding-bottom: 50px;
-      margin-top: 65px;
-    }
+  .tour__send {
+    order: 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-top: 65px;
+  }
 
-    &__man,
-    &__down,
-    &__app,
-    &__emotion,
-    &__send {
-      margin: 0 auto;
-      padding: 0;
-      width: 620px;
-    }
+  .tour__man,
+  .tour__down,
+  .tour__app,
+  .tour__emotion,
+  .tour__send {
+    margin: 0 auto;
+    padding: 0;
+    width: 620px;
+  }
 
-    &__people-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 53px;
-    }
+  .tour__people-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 53px;
+  }
 
-    &__family,
-    &__name,
-    &__patronymic {
-      margin-left: 0;
-      margin-right: 20px;
-      padding-top: 17px;
-    }
+  .tour__family,
+  .tour__name,
+  .tour__patronymic {
+    margin-left: 0;
+    margin-right: 20px;
+    padding-top: 17px;
+  }
 
-    &__man input {
-      width: 100%;
-      height: 59px;
-      margin-top: 0;
-    }
+  .tour__man input {
+    width: 100%;
+    height: 59px;
+    margin-top: 0;
+  }
 
-    &__container-app,
-    &__container-progress,
-    &__container-down,
-    &__container-emotion {
-      margin: 0;
-      padding: 0 60px;
-      width: 496px;
-      background-color: #ffffff;
-      border: 2px solid #f2f2f2;
-    }
+  .tour__container-app,
+  .tour__container-progress,
+  .tour__container-down,
+  .tour__container-emotion {
+    margin: 0;
+    padding: 0 60px;
+    width: 496px;
+    background-color: @bg-white;
+    border: 2px solid @bg-light;
+  }
 
-    &__make,
-    &__address,
-    &__device {
-      margin: 0;
-      padding: 0;
-    }
+  .tour__make,
+  .tour__address,
+  .tour__device {
+    margin: 0;
+    padding: 0;
+  }
 
-    &__container-down {
-      margin-bottom: 48px;
-    }
+  .tour__container-down {
+    margin-bottom: 48px;
+  }
 
-    &__contact-address {
-      display: block;
-      margin: auto;
-      margin-bottom: 28px;
-      padding: 0 30px;
-      font-size: 14px;
-      line-height: 30px;
-      background-color: #ffffff;
-      text-transform: uppercase;
-      color: #d22856;
-    }
+  .tour__contact-address {
+    display: block;
+    margin: auto;
+    margin-bottom: 28px;
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: @bg-white;
+    text-transform: uppercase;
+    color: @cl-red;
+  }
 
-    &__address-item {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
-    }
+  .tour__address-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 
-    &__address-item label {
-      order: 2;
-      cursor: pointer;
-    }
-
-    &__address-item input {
-      order: 1;
-      width: 393px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    &__address-item::before {
+    &::before {
       position: absolute;
       content: "";
       top: 0;
       right: 0;
       width: 60px;
       height: 62px;
-      background-color: #f2f2f2;
+      background-color: @bg-light;
     }
 
-    &__address-item--phone::after {
+    &--phone::after {
       position: absolute;
       content: "";
       top: 20px;
@@ -603,7 +591,7 @@
       background: url("../img/icon-phone.svg") no-repeat 0 0;
     }
 
-    &__address-item--mail::after {
+    &--mail::after {
       position: absolute;
       content: "";
       top: 22px;
@@ -612,310 +600,321 @@
       height: 14px;
       background: url("../img/icon-mail.svg") no-repeat 0 0;
     }
+  }
 
-    &__container-emotion {
-      padding-bottom: 40px;
+  .tour__address-item label {
+    order: 2;
+    cursor: pointer;
+  }
+
+  .tour__address-item input {
+    order: 1;
+    width: 393px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .tour__container-emotion {
+    padding-bottom: 40px;
+  }
+
+  .tour__emotion textarea {
+    width: 456px;
+    height: 149px;
+    border: 2px solid @bg-light;
+  }
+
+  .tour__man,
+  .tour__progress,
+  .tour__app,
+  .tour__emotion {
+    border: none;
+  }
+
+  .tour__progress,
+  .tour__app {
+    background-color: @bg-white;
+  }
+
+  .tour__journey {
+    margin: auto;
+    margin-bottom: 48px;
+    background-color: @bg-white;
+    font-size: 14px;
+    line-height: 30px;
+    color: @cl-red;
+    text-transform: uppercase;
+  }
+
+  .tour__write {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .tour__send--btn {
+    margin-bottom: 0;
+    width: 296px;
+  }
+
+  .tour__legend {
+    padding-top: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .tour__error {
+    bottom: -230px;
+    left: 80px;
+    width: 296px;
+    min-height: 278px;
+    padding: 35px 82px 50px 82px;
+    box-shadow: 0 5px 20px #dfdfdf;
+  }
+
+  .tour__badly {
+    margin: 0 45px 30px 45px;
+    font-size: 28px;
+  }
+
+  .tour__fail {
+    margin: 0;
+    margin-bottom: 34px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .tour__btn--error {
+    width: 296px;
+  }
+
+  .tour__successfully {
+    bottom: -90px;
+    left: 80px;
+    width: 296px;
+    min-height: 346px;
+    padding: 35px 82px 50px 82px;
+    box-shadow: 0 5px 20px #dfdfdf;
+
+    &::before {
+      width: 460px;
     }
+  }
 
-    &__emotion textarea {
-      width: 456px;
-      height: 149px;
-      border: 2px solid #f2f2f2;
-    }
+  .tour__good {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
 
-    &__man,
-    &__progress,
-    &__app,
-    &__emotion {
-      border: none;
-    }
+  .tour__luck {
+    margin: 0;
+    margin-bottom: 80px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 
-    &__progress,
-    &__app {
-      background-color: #ffffff;
-    }
-
-    &__journey {
-      margin: auto;
-      margin-bottom: 48px;
-      background-color: #ffffff;
-      font-size: 14px;
-      line-height: 30px;
-      color: #d22856;
-      text-transform: uppercase;
-    }
-
-    &__write {
-      margin-top: 0;
-      margin-bottom: 30px;
-    }
-
-    &__send--btn {
-      margin-bottom: 0;
-      width: 296px;
-    }
-
-    &__legend {
-      padding-top: 15px;
-      font-size: 14px;
-      line-height: 30px;
-      text-transform: uppercase;
-    }
-
-    &__error {
-      bottom: -230px;
-      left: 80px;
-      width: 296px;
-      min-height: 278px;
-      padding: 35px 82px 50px 82px;
-      box-shadow: 0 5px 20px #dfdfdf;
-    }
-
-    &__badly {
-      margin: 0 45px 30px 45px;
-      font-size: 28px;
-    }
-
-    &__fail {
-      margin: 0;
-      margin-bottom: 34px;
-      font-size: 18px;
-      line-height: 30px;
-    }
-
-    &__btn--error {
-      width: 296px;
-    }
-
-    &__successfully {
-      bottom: -90px;
-      left: 80px;
-      width: 296px;
-      min-height: 346px;
-      padding: 35px 82px 50px 82px;
-      box-shadow: 0 5px 20px #dfdfdf;
-
-      &::before {
-        width: 460px;
-      }
-    }
-
-    &__good {
-      margin: 0;
-      margin-bottom: 20px;
-      font-size: 28px;
-    }
-
-    &__luck {
-      margin: 0;
-      margin-bottom: 80px;
-      font-size: 18px;
-      line-height: 30px;
-    }
-
-    &__btn--successfully {
-      width: 295px;
-    }
+  .tour__btn--successfully {
+    width: 295px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .tour {
-
     margin-top: -110px;
     margin-bottom: 200px;
+  }
 
-    &__header {
-      min-height: 395px;
-      background-image: url("../img/bg-back-desktop@1x.jpg");
+  .tour__header {
+    min-height: 395px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/bg-back-desktop@2x.jpg");
-      }
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
     }
+  }
 
-    &__slogan {
-      padding-top: 175px;
+  .tour__slogan {
+    padding-top: 175px;
+  }
+
+  .tour__text {
+    padding: 92px 90px 84px 90px;
+  }
+
+  .tour__form-container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 130px;
+  }
+
+  .tour__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .tour__man {
+    margin: 0;
+    width: 435px;
+  }
+
+  .tour__family,
+  .tour__name,
+  .tour__patronymic {
+    margin-left: 0;
+  }
+
+  .tour__down,
+  .tour__emotion,
+  .tour__progress,
+  .tour__send {
+    margin: 0 auto;
+    padding: 0;
+    width: 940px;
+  }
+
+  .tour__progress {
+    margin-bottom: 52px;
+  }
+
+  .tour__make {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    height: 160px;
+  }
+
+  .tour__make-item {
+    margin-right: 58px;
+  }
+
+  .tour__device {
+    padding-left: 75px;
+  }
+
+  .tour__device .tour__device-item:last-child {
+    margin-bottom: 51px;
+  }
+
+  .tour__container-down,
+  .tour__container-progress,
+  .tour__container-emotion {
+    width: 816px;
+  }
+
+  .tour__address {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tour__address-item {
+    width: 371px;
+  }
+
+  .tour__down input {
+    width: 268px;
+  }
+
+  .tour__app {
+    margin: 0;
+    margin-top: -20px;
+    width: 435px;
+  }
+
+  .tour__container-app {
+    width: 431px;
+    padding: 0;
+  }
+
+  .tour__emotion textarea {
+    width: 776px;
+    height: 84px;
+  }
+
+  .tour__man,
+  .tour__progress,
+  .tour__down,
+  .tour__app,
+  .tour__emotion {
+    border: none;
+  }
+
+  .tour__family,
+  .tour__name,
+  .tour__patronymic,
+  .tour__write {
+    font-size: 14px;
+    line-height: 30px;
+    color: @cl-red;
+    text-transform: uppercase;
+  }
+
+  .tour__journey {
+    margin-bottom: 43px;
+    padding: 0 25px;
+  }
+
+  .tour__send {
+    text-align: center;
+    margin-top: 68px;
+  }
+
+  .tour__legend {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .tour__legend--text {
+    display: inline-block;
+  }
+
+  .tour__error {
+    width: 360px;
+    min-height: 281px;
+    padding: 45px 210px 50px 210px;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 780px;
+      height: 163px;
+      background: @bg-light;
     }
+  }
 
-    &__text {
-      padding: 92px 90px 84px 90px;
+  .tour__badly {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .tour__fail {
+    margin-bottom: 107px;
+  }
+
+  .tour__successfully {
+    bottom: -503px;
+    width: 460px;
+    min-height: 291px;
+    padding: 35px 160px 50px 160px;
+
+    &::before {
+      width: 780px;
     }
+  }
 
-    &__form-container {
-      width: 940px;
-      margin: 0 auto;
-      padding: 0 130px;
-    }
+  .tour__luck {
+    margin: 0 30px 85px 30px;
+  }
 
-    &__form {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    &__man {
-      margin: 0;
-      width: 435px;
-    }
-
-    &__family,
-    &__name,
-    &__patronymic {
-      margin-left: 0;
-    }
-
-    &__down,
-    &__emotion,
-    &__progress,
-    &__send {
-      margin: 0 auto;
-      padding: 0;
-      width: 940px;
-    }
-
-    &__progress {
-      margin-bottom: 52px;
-    }
-
-    &__make {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-      height: 160px;
-    }
-
-    &__make-item {
-      margin-right: 58px;
-    }
-
-    &__device {
-      padding-left: 75px;
-    }
-
-    &__device .tour__device-item:last-child {
-      margin-bottom: 51px;
-    }
-
-    &__container-down,
-    &__container-progress,
-    &__container-emotion {
-      width: 816px;
-    }
-
-    &__address {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__address-item {
-      width: 371px;
-    }
-
-    &__down input {
-      width: 268px;
-    }
-
-    &__app {
-      margin: 0;
-      margin-top: -20px;
-      width: 435px;
-    }
-
-    &__container-app {
-      width: 431px;
-      padding: 0;
-    }
-
-    &__emotion textarea {
-      width: 776px;
-      height: 84px;
-    }
-
-    &__man,
-    &__progress,
-    &__down,
-    &__app,
-    &__emotion {
-      border: none;
-    }
-
-    &__family,
-    &__name,
-    &__patronymic,
-    &__write {
-      font-size: 14px;
-      line-height: 30px;
-      color: #d22856;
-      text-transform: uppercase;
-    }
-
-    &__journey {
-      margin-bottom: 43px;
-      padding: 0 25px;
-    }
-
-    &__send {
-      text-align: center;
-      margin-top: 68px;
-    }
-
-    &__legend {
-      font-size: 14px;
-      line-height: 30px;
-      text-transform: uppercase;
-    }
-
-    &__legend--text {
-      display: inline-block;
-    }
-
-    &__error {
-      width: 360px;
-      min-height: 281px;
-      padding: 45px 210px 50px 210px;
-
-      &::before {
-        position: absolute;
-        z-index: -1;
-        content: "";
-        bottom: 0;
-        left: 0;
-        width: 780px;
-        height: 163px;
-        background: #f2f2f2;
-      }
-    }
-
-    &__badly {
-      margin: 0;
-      margin-bottom: 30px;
-    }
-
-    &__fail {
-      margin-bottom: 107px;
-    }
-
-    &__successfully {
-      bottom: -503px;
-      width: 460px;
-      min-height: 291px;
-      padding: 35px 160px 50px 160px;
-
-      &::before {
-        width: 780px;
-      }
-    }
-
-    &__luck {
-      margin: 0 30px 85px 30px;
-    }
-
-    &__btn--successfully {
-      width: 456px;
-    }
+  .tour__btn--successfully {
+    width: 456px;
   }
 }

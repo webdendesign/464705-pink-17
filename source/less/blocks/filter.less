@@ -1,49 +1,47 @@
-.filter {
-  &__wrapper {
-    margin-bottom: 284px;
-    background-color: @bg-light;
-  }
+.filter__wrapper {
+  margin-bottom: 284px;
+  background-color: @bg-light;
+}
 
-  &__header {
-    background-color: @bg-white;
-  }
+.filter__header {
+  background-color: @bg-white;
+}
 
-  &__slogan {
-    margin: 45px 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-  }
+.filter__slogan {
+  margin: 45px 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
 
-  &__main {
-    padding-top: 20px;
-    background-color: @bg-light;
-  }
+.filter__main {
+  padding-top: 20px;
+  background-color: @bg-light;
+}
 
-  &__right {
-    margin-top: 40px;
-  }
+.filter__right {
+  margin-top: 40px;
+}
 
-  &__list {
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    margin-bottom: 70px;
-    padding: 0 20px;
-    list-style: none;
-  }
+.filter__list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 0 20px;
+  list-style: none;
+}
 
-  &__range--fill,
-  &__range--contrast {
-    display: none;
-  }
+.filter__range--fill,
+.filter__range--contrast {
+  display: none;
+}
 
-  &__item {
-    position: relative;
-  }
+.filter__item {
+  position: relative;
 
-  &__item::before {
+  &::before {
     position: absolute;
     content: "";
 
@@ -54,366 +52,364 @@
     height: 1px;
     background: #b5b9be;
   }
+}
 
-  &__list &__item:nth-child(2)::before,
-  &__list &__item:nth-child(3)::before {
-    display: none;
-  }
+.filter__list .filter__item:nth-child(2)::before,
+.filter__list .filter__item:nth-child(3)::before {
+  display: none;
+}
 
-  &__item--crop svg,
-  &__item--fill svg {
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-  }
+.filter__item--crop svg,
+.filter__item--fill svg {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
 
-  &__item--contrast svg {
-    padding-top: 6px;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-  }
+.filter__item--contrast svg {
+  padding-top: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
 
-  &__item-link:focus {
-    outline: 3px solid pink;
-  }
+.filter__item-link:focus {
+  outline: 3px solid pink;
+}
 
-  &__item--crop:hover path,
-  &__item--fill:hover path,
-  &__item--fill:hover rect,
-  &__item--contrast:hover path {
-    fill: #8d949b;
-  }
+.filter__item--crop:hover path,
+.filter__item--fill:hover path,
+.filter__item--fill:hover rect,
+.filter__item--contrast:hover path {
+  fill: #8d949b;
+}
 
-  &__item--crop:active path,
-  &__item--fill:active path,
-  &__item--fill:active rect,
-  &__item--contrast:active path {
-    fill: @cl-red;
-  }
+.filter__item--crop:active path,
+.filter__item--fill:active path,
+.filter__item--fill:active rect,
+.filter__item--contrast:active path {
+  fill: @cl-red;
+}
 
-  &__item--active svg path {
-    fill: @cl-red;
-  }
+.filter__item--active svg path {
+  fill: @cl-red;
+}
 
-  &__range--crop {
-    position: relative;
-  }
+.filter__range--crop {
+  position: relative;
+}
 
-  &__scale {
-    position: absolute;
-    top: 31px;
-    left: -20px;
+.filter__scale {
+  position: absolute;
+  top: 31px;
+  left: -20px;
 
-    width: 240px;
-    height: 2px;
+  width: 240px;
+  height: 2px;
 
-    background: @bg-dark;
-  }
+  background: @bg-dark;
+}
 
-  &__range-toggle {
-    position: absolute;
-    top: 25px;
-    left: 160px;
+.filter__range-toggle {
+  position: absolute;
+  top: 25px;
+  left: 160px;
 
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 
-    background: @bg-white;
-    border: 2px solid @cl-red;
-    border-radius: 50%;
+  background: @bg-white;
+  border: 2px solid @cl-red;
+  border-radius: 50%;
 
-    cursor: pointer;
-  }
+  cursor: pointer;
 
-  &__range-toggle:active,
-  &__range-toggle:focus {
+
+  &:active,
+  &:focus {
     background: @cl-red;
   }
+}
 
-  &__range--active {
-    background: @cl-red;
+.filter__range--active {
+  background: @cl-red;
+}
+
+.filter__btn {
+  position: relative;
+}
+
+.filter__submit,
+.filter__reset {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 280px;
+  height: 54px;
+  background-color: @bg-light;
+  cursor: pointer;
+}
+
+.filter__submit {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: @cl-red;
+  border: 3px solid @cl-red;
+
+  &:hover,
+  &:focus {
+    background-color: @cl-red;
+    color: @bg-white;
+    outline: none;
   }
 
-  &__btn {
-    position: relative;
+  &:active {
+    color: #e06989;
+  }
+}
+
+.filter__reset {
+  margin-bottom: 45px;
+  color: #dddfe0;
+  border: 3px solid #dddfe0;
+
+  &:hover,
+  &:focus {
+    color: #b5b9be;
+    border: 3px solid #b5b9be;
+    outline: none;
   }
 
-  &__submit,
-  &__reset {
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: bold;
-    border-radius: 50px;
-    width: 280px;
-    height: 54px;
-    background-color: @bg-light;
-    cursor: pointer;
-  }
-
-  &__submit {
-    margin-top: 35px;
-    margin-bottom: 15px;
-    color: @cl-red;
-    border: 3px solid @cl-red;
-
-    &:hover,
-    &:focus {
-      background-color: @cl-red;
-      color: @bg-white;
-      outline: none;
-    }
-
-    &:active {
-      color: #e06989;
-    }
-  }
-
-  &__reset {
-    margin-bottom: 45px;
-    color: #dddfe0;
-    border: 3px solid #dddfe0;
-
-    &:hover,
-    &:focus {
-      color: #b5b9be;
-      border: 3px solid #b5b9be;
-      outline: none;
-    }
-
-    &:active {
-      color: #cbced2;
-      background-color: #b5b9be;
-    }
+  &:active {
+    color: #cbced2;
+    background-color: #b5b9be;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .filter {
-    &__wrapper {
-      margin-bottom: 128px;
-      background-color: #f2f2f2;
-    }
+  .filter__wrapper {
+    margin-bottom: 128px;
+    background-color: #f2f2f2;
+  }
 
-    &__slogan {
-      margin: 65px 0 65px 0;
-      font-size: 18px;
-    }
+  .filter__slogan {
+    margin: 65px 0 65px 0;
+    font-size: 18px;
+  }
 
-    &__main {
-      display: flex;
-      justify-content: space-between;
-      background-color: #f2f2f2;
-      padding-top: 55px;
-      padding-bottom: 55px;
-    }
+  .filter__main {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 
-    &__main img {
-      width: 300px;
-      height: 400px;
-    }
+  .filter__main img {
+    width: 300px;
+    height: 400px;
+  }
 
-    &__right {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 0;
-      width: 275px;
-    }
+  .filter__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    width: 275px;
+  }
 
-    &__list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      margin: 0;
-      padding: 0;
-    }
+  .filter__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
 
-    &__range--fill,
-    &__range--contrast {
-      display: inline-block;
-      position: relative;
-    }
+  .filter__range--fill,
+  .filter__range--contrast {
+    display: inline-block;
+    position: relative;
+  }
 
-    &__item {
-      display: flex;
-      flex-direction: row;
-      padding-top: 10px;
-      padding-bottom: 20px;
-    }
+  .filter__item {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 20px;
 
-    &__list &__item:nth-child(2)::before,
-    &__list &__item:nth-child(3)::before {
-      display: block;
-    }
-
-    &__item::before {
+    &::before {
       bottom: 0;
       left: 0;
       width: 275px;
     }
 
-    &__item--crop svg,
-    &__item--fill svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    &__item--contrast svg {
-      width: 16px;
-      height: 16px;
-      padding: 4px 0 4px 5px;
-    }
-
-    &__item--fill,
-    &__item--contrast {
+    &--fill,
+    &--contrast {
       padding-top: 22px;
       padding-bottom: 22px;
     }
 
-    &__scale {
-      width: 202px;
+    &--crop svg,
+    &--fill svg {
+      width: 24px;
+      height: 24px;
     }
 
-    &__range--crop &__scale {
-      top: 12px;
-      left: 35px;
+    &--contrast svg {
+      width: 16px;
+      height: 16px;
+      padding: 4px 0 4px 5px;
     }
+  }
 
-    &__range--crop &__range-toggle {
-      top: 6px;
-      left: 190px;
-    }
+  .filter__list .filter__item:nth-child(2)::before,
+  .filter__list .filter__item:nth-child(3)::before {
+    display: block;
+  }
 
-    &__range--fill .filter__scale {
-      top: 11px;
-      left: 36px;
-    }
+  .filter__scale {
+    width: 202px;
+  }
 
-    &__range--fill &__range-toggle {
-      top: 5px;
-      left: 70px;
-    }
+  .filter__range--crop .filter__scale {
+    top: 12px;
+    left: 35px;
+  }
 
-    &__range--contrast &__scale {
-      left: 39px;
-      top: 10px;
-    }
+  .filter__range--crop .filter__range-toggle {
+    top: 6px;
+    left: 190px;
+  }
 
-    &__range--contrast &__range-toggle {
-      top: 4px;
-      left: 140px;
-    }
+  .filter__range--fill .filter__scale {
+    top: 11px;
+    left: 36px;
+  }
 
-    &__submit,
-    &__reset {
-      margin: 0;
-      width: 260px;
-      height: 54px;
-    }
+  .filter__range--fill .filter__range-toggle {
+    top: 5px;
+    left: 70px;
+  }
 
-    &__reset {
-      margin-top: 25px;
-    }
+  .filter__range--contrast .filter__scale {
+    left: 39px;
+    top: 10px;
+  }
+
+  .filter__range--contrast .filter__range-toggle {
+    top: 4px;
+    left: 140px;
+  }
+
+  .filter__submit,
+  .filter__reset {
+    margin: 0;
+    width: 260px;
+    height: 54px;
+  }
+
+  .filter__reset {
+    margin-top: 25px;
   }
 }
 
+
 @media (min-width: @desktop-width) {
-  .filter {
-    &__wrapper {
-      background-color: #ffffff;
-      margin-bottom: 233px;
-    }
+  .filter__wrapper {
+    background-color: #ffffff;
+    margin-bottom: 233px;
+  }
 
-    &__slogan {
-      margin: 7px 0 65px 0;
-    }
+  .filter__slogan {
+    margin: 7px 0 65px 0;
+  }
 
-    &__main {
-      padding: 54px 60px 54px 80px;
-      background-color: #f2f2f2;
-    }
+  .filter__main {
+    padding: 54px 60px 54px 80px;
+    background-color: #f2f2f2;
+  }
 
-    &__right {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+  .filter__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .filter__item {
+    padding-top: 0;
+    padding-bottom: 10px;
+
+    &::before {
       width: 410px;
     }
 
-    &__item {
-      padding-top: 0;
-      padding-bottom: 10px;
+    &--fill {
+      padding: 15px 0 10px 0;
     }
 
-    &__item::before {
-      width: 410px;
+    &--contrast {
+      padding: 0;
     }
 
-    &__item--crop svg,
-    &__item--fill svg {
+    &--crop svg,
+    &--fill svg {
       width: 48px;
       height: 48px;
     }
 
-    &__item--fill {
-      padding: 15px 0 10px 0;
-    }
-
-    &__item--contrast {
-      padding: 0;
-    }
-
-    &__item--contrast svg {
+    &--contrast svg {
       width: 32px;
       height: 32px;
       padding: 18px 0 20px 6px;
     }
+  }
 
-    &__scale {
-      width: 288px;
-    }
+  .filter__scale {
+    width: 288px;
+  }
 
-    &__range--crop .filter__scale {
-      top: 22px;
-      left: 45px;
-    }
+  .filter__range--crop .filter__scale {
+    top: 22px;
+    left: 45px;
+  }
 
-    &__range--crop .filter__range-toggle {
-      top: 16px;
-      left: 115px;
-    }
+  .filter__range--crop .filter__range-toggle {
+    top: 16px;
+    left: 115px;
+  }
 
-    &__range--fill .filter__scale {
-      top: 22px;
-      left: 45px;
-    }
+  .filter__range--fill .filter__scale {
+    top: 22px;
+    left: 45px;
+  }
 
-    &__range--fill .filter__range-toggle {
-      top: 16px;
-      left: 290px;
-    }
+  .filter__range--fill .filter__range-toggle {
+    top: 16px;
+    left: 290px;
+  }
 
-    &__range--contrast .filter__scale {
-      top: 34px;
-      left: 54px;
-    }
+  .filter__range--contrast .filter__scale {
+    top: 34px;
+    left: 54px;
+  }
 
-    &__range--contrast .filter__range-toggle {
-      top: 28px;
-      left: 215px;
-    }
+  .filter__range--contrast .filter__range-toggle {
+    top: 28px;
+    left: 215px;
+  }
 
-    &__btn {
-      display: flex;
-      justify-content: space-between;
-    }
+  .filter__btn {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__submit,
-    &__reset {
-      margin: 0;
-      width: 184px;
-      height: 54px;
-    }
+  .filter__submit,
+  .filter__reset {
+    margin: 0;
+    width: 184px;
+    height: 54px;
   }
 }
