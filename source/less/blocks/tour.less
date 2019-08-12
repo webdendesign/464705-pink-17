@@ -444,7 +444,7 @@
       background-size: 1200px auto;
     }
 
-    &__header::before {
+    &::before {
       height: 110px;
     }
   }
@@ -482,23 +482,8 @@
     order: 3;
   }
 
-  .tour__app {
-    order: 2;
-    margin-bottom: 50px;
-    background-color: @bg-white;
-  }
-
   .tour__emotion {
     order: 5;
-  }
-
-  .tour__send {
-    order: 6;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 50px;
-    margin-top: 65px;
   }
 
   .tour__man,
@@ -509,6 +494,21 @@
     margin: 0 auto;
     padding: 0;
     width: 620px;
+  }
+
+  .tour__app {
+    order: 2;
+    margin-bottom: 50px;
+    background-color: @bg-white;
+  }
+
+  .tour__send {
+    order: 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-top: 65px;
   }
 
   .tour__people-item {

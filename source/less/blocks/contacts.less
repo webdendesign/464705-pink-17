@@ -1,4 +1,5 @@
 .contacts {
+  min-height: 590px;
   text-align: center;
 }
 
@@ -116,6 +117,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    min-height: 905px;
+  }
+
   .contacts__wrapper {
     position: relative;
     padding-top: 55px;
@@ -173,6 +178,7 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
+    min-height: 1060px;
     margin: 0 auto;
   }
 
@@ -196,7 +202,7 @@
   }
 
   .contacts__list {
-    /*position: relative;*/
+    position: relative;
     display: flex;
     justify-content: space-around;
     min-height: 120px;
@@ -230,7 +236,7 @@
   }
 
   .contacts__map iframe {
-    /*position: absolute;*/
+    position: absolute;
     z-index: 3;
     top: 0;
     left: 0;
