@@ -112,7 +112,7 @@
           <h2 class="reviews__intro container">Фотографии<br>пользователей</h2>
         </header>
         <div class="container">
-          <p class="reviews__slogan">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
+          <p class="reviews__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         </div>
         <div class="reviews__promo">
           <div class="container">
@@ -404,22 +404,7 @@
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/menu.js"></script>
 
   </body>
 </html>

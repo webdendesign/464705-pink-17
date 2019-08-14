@@ -40,8 +40,8 @@
 
 .tour__text {
   margin: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 45px;
+  padding-bottom: 35px;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -69,7 +69,7 @@
 .tour__down input {
   margin-top: 5px;
   padding: 0 20px;
-  width: 232px;
+  width: 235px;
   height: 59px;
   font-size: 18px;
   line-height: 30px;
@@ -112,6 +112,10 @@
   position: relative;
 }
 
+.tour__man {
+  margin-bottom: 30px;
+}
+
 .tour__progress,
 .tour__app {
   margin: 0 auto;
@@ -119,8 +123,13 @@
   background-color: @bg-light;
 }
 
+.tour__app {
+  padding-top: 38px;
+}
+
 .tour__down {
-  margin-top: 40px;
+  margin-top: 32px;
+  margin-bottom: 27px;
 }
 
 .tour__family,
@@ -139,6 +148,10 @@
   padding: 0;
   width: 280px;
   border: none;
+}
+
+.tour__progress {
+  padding-top: 35px;
 }
 
 .tour__container-emotion,
@@ -164,13 +177,17 @@
 }
 
 .tour__journey {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .tour__make-item {
   height: 39px;
-  margin-bottom: 39px;
+  margin-bottom: 43px;
+}
+
+.tour__make li:last-child {
+  margin-bottom: 37px;
 }
 
 .tour__device-item {
@@ -190,7 +207,7 @@
 .tour__make-item .turret-checkbox,
 .tour__make-item .otel-checkbox {
   position: relative;
-  padding-left: 59px;
+  padding-left: 70px;
 }
 
 .tour__progress input[type="checkbox"] + .input-checkbox::before {
@@ -243,7 +260,7 @@
 .tour__device-item .android-checkbox,
 .tour__device-item .windows-checkbox {
   position: relative;
-  padding-left: 60px;
+  padding-left: 70px;
 }
 
 .tour__app input[type="radio"] + .input-checkbox::before {
@@ -284,16 +301,17 @@
 
 .tour__emotion {
   margin-bottom: 45px;
+  padding-top: 38px;
 }
 
 .tour__write {
   margin-top: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .tour__emotion textarea {
-  padding: 15px 20px 25px 20px;
-  width: 236px;
+  padding: 15px 17px 25px;
+  width: 239px;
   height: 157px;
   border: 2px solid @bg-light;
   font-size: 18px;
@@ -308,7 +326,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .tour__btn {
@@ -340,10 +358,11 @@
 }
 
 .tour__send--btn {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   width: 280px;
-  height: 59px;
+  height: 63px;
   border-radius: 2px;
+  border: 2px solid #2aab6d;
 }
 
 .tour__legend {
@@ -450,13 +469,13 @@
   }
 
   .tour__slogan {
-    padding-top: 180px;
+    padding-top: 177px;
     font-size: 50px;
     line-height: 60px;
   }
 
   .tour__text {
-    padding: 80px 50px 70px 50px;
+    padding: 90px 50px 70px;
     font-size: 18px;
   }
 
@@ -475,7 +494,8 @@
 
   .tour__progress {
     order: 4;
-    margin-bottom: 52px;
+    margin-bottom: 62px;
+    padding-top: 49px;
   }
 
   .tour__down {
@@ -517,6 +537,19 @@
     margin-bottom: 53px;
   }
 
+  .tour__make-item .sharks-checkbox,
+  .tour__make-item .beach-checkbox,
+  .tour__make-item .chaki-checkbox,
+  .tour__make-item .souvenirs-checkbox,
+  .tour__make-item .turret-checkbox,
+  .tour__make-item .otel-checkbox,
+  .tour__device-item .ios-checkbox,
+  .tour__device-item .android-checkbox,
+  .tour__device-item .windows-checkbox {
+    position: relative;
+    padding-left: 58px;
+  }
+
   .tour__family,
   .tour__name,
   .tour__patronymic {
@@ -536,10 +569,14 @@
   .tour__container-down,
   .tour__container-emotion {
     margin: 0;
-    padding: 0 60px;
-    width: 496px;
+    padding: 0 57px;
+    width: 500px;
     background-color: @bg-white;
     border: 2px solid @bg-light;
+  }
+
+  .tour__container-app {
+    padding-bottom: 15px;
   }
 
   .tour__make,
@@ -550,13 +587,13 @@
   }
 
   .tour__container-down {
-    margin-bottom: 48px;
+    /*margin-bottom: 48px;*/
   }
 
   .tour__contact-address {
     display: block;
     margin: auto;
-    margin-bottom: 28px;
+    margin-bottom: 31px;
     padding: 0 30px;
     font-size: 14px;
     line-height: 30px;
@@ -569,7 +606,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 
     &::before {
       position: absolute;
@@ -609,17 +646,17 @@
 
   .tour__address-item input {
     order: 1;
-    width: 393px;
+    width: 396px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 
   .tour__container-emotion {
-    padding-bottom: 40px;
+    padding-bottom: 47px;
   }
 
   .tour__emotion textarea {
-    width: 456px;
+    width: 463px;
     height: 149px;
     border: 2px solid @bg-light;
   }
@@ -638,7 +675,7 @@
 
   .tour__journey {
     margin: auto;
-    margin-bottom: 48px;
+    margin-bottom: 45px;
     background-color: @bg-white;
     font-size: 14px;
     line-height: 30px;
@@ -648,7 +685,7 @@
 
   .tour__write {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
   }
 
   .tour__send--btn {
@@ -776,7 +813,8 @@
   }
 
   .tour__progress {
-    margin-bottom: 52px;
+    margin-top: 50px;
+    margin-bottom: 51px;
   }
 
   .tour__make {
@@ -790,6 +828,7 @@
 
   .tour__make-item {
     margin-right: 58px;
+    margin-bottom: 38px;
   }
 
   .tour__device {
@@ -803,7 +842,11 @@
   .tour__container-down,
   .tour__container-progress,
   .tour__container-emotion {
-    width: 816px;
+    width: 820px;
+  }
+
+  .tour__contact-address {
+    margin-bottom: 27px;
   }
 
   .tour__address {
@@ -812,11 +855,12 @@
   }
 
   .tour__address-item {
-    width: 371px;
+    width: 376px;
+    margin-bottom: 15px;
   }
 
   .tour__down input {
-    width: 268px;
+    width: 273px;
   }
 
   .tour__app {
@@ -830,8 +874,16 @@
     padding: 0;
   }
 
+  .tour__container-emotion {
+    padding-bottom: 40px;
+  }
+
+  .tour__write {
+    margin-bottom: 28px;
+  }
+
   .tour__emotion textarea {
-    width: 776px;
+    width: 784px;
     height: 84px;
   }
 
@@ -860,7 +912,7 @@
 
   .tour__send {
     text-align: center;
-    margin-top: 68px;
+    margin-top: 65px;
   }
 
   .tour__legend {

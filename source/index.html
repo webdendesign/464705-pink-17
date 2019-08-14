@@ -169,7 +169,7 @@
         <div class="container">
           <div class="effect__wrapper">
             <p class="effect__time">24</p>
-            <h2 class="effect__header">Эффект на 24 часа!</h2>
+            <h2 class="effect__header">Эффект <br> на 24 часа!</h2>
             <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a class="effect__link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -280,11 +280,11 @@
           <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
           <ul class="contacts__list">
             <li class="contacts__item contacts__item--phone">
-              <p class="contacts__title">Звоните:</p>
+              <p class="contacts__title contacts__title--phone">Звоните:</p>
               <p class="contacts__phone">+7 (812) 555-66-66</p>
             </li>
             <li class="contacts__item contacts__item--email">
-              <p class="contacts__title">Пишите:</p>
+              <p class="contacts__title contacts__title--email">Пишите:</p>
               <a href="https://htmlacademy.ru/intensive/adaptive" class="contacts__email"><span class="visually-hidden">Интенсив HTML Academy 2 уровня</span>mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item contacts__item--street">
@@ -393,22 +393,7 @@
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/menu.js"></script>
 
   </body>
 </html>
