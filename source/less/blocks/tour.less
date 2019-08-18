@@ -782,7 +782,7 @@
   .tour__form-container {
     width: 940px;
     margin: 0 auto;
-    padding: 0 130px;
+    padding: 0 10px;
   }
 
   .tour__form {
@@ -819,16 +819,44 @@
 
   .tour__make {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 12px;
-    height: 160px;
   }
 
   .tour__make-item {
-    margin-right: 58px;
-    margin-bottom: 38px;
+    margin-bottom: 42px;
+
+    &--sharks {
+      order: 1;
+      margin-right: 15px;
+    }
+
+    &--chaki {
+      order: 2;
+      margin-right: 8px;
+    }
+
+    &--turret {
+      margin-right: 8px;
+      order: 3;
+    }
+
+    &--beach {
+      margin-right: 36px;
+      order: 4;
+    }
+
+    &--souvenirs {
+      order: 5;
+      margin-right: 5px;
+    }
+
+    &--otel {
+      order: 6;
+      margin-right: 0;
+    }
   }
 
   .tour__device {
@@ -852,6 +880,7 @@
   .tour__address {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .tour__address-item {
