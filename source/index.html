@@ -11,7 +11,7 @@
     <script>
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.min.js" async=""></script>
+    <script src="js/picturefill.js" async=""></script>
   </head>
   <body>
 
@@ -275,33 +275,35 @@
       </section>
 
       <section class="contacts">
-        <div class="contacts__wrapper container">
-          <h2 class="visually-hidden">Свяжитесь с нами!</h2>
-          <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
-          <ul class="contacts__list">
-            <li class="contacts__item contacts__item--phone">
-              <p class="contacts__title contacts__title--phone">Звоните:</p>
-              <p class="contacts__phone">+7 (812) 555-66-66</p>
-            </li>
-            <li class="contacts__item contacts__item--email">
-              <p class="contacts__title contacts__title--email">Пишите:</p>
-              <a href="https://htmlacademy.ru/intensive/adaptive" class="contacts__email"><span class="visually-hidden">Интенсив HTML Academy 2 уровня</span>mail@htmlacademy.ru</a>
-            </li>
-            <li class="contacts__item contacts__item--street">
-              <p class="contacts__title">Приезжайте в гости:</p>
-              <p class="contacts__street">ул. Большая <br>Конюшенная, 19/8</p>
-            </li>
-          </ul>
+        <div class="contacts__wrapper">
+          <div class="contacts__container-up container">
+            <h2 class="visually-hidden">Свяжитесь с нами!</h2>
+            <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--phone">
+                <p class="contacts__title contacts__title--phone">Звоните:</p>
+                <p class="contacts__phone">+7 (812) 555-66-66</p>
+              </li>
+              <li class="contacts__item contacts__item--email">
+                <p class="contacts__title contacts__title--email">Пишите:</p>
+                <a href="https://htmlacademy.ru/intensive/adaptive" class="contacts__email"><span class="visually-hidden">Интенсив HTML Academy 2 уровня</span>mail@htmlacademy.ru</a>
+              </li>
+              <li class="contacts__item contacts__item--street">
+                <p class="contacts__title">Приезжайте в гости:</p>
+                <p class="contacts__street">ул. Большая <br>Конюшенная, 19/8</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="contacts__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5615178370174!2d30.321212767420803!3d59.939417827538946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1561551501298!5m2!1sru!2sru" width="600" height="450" style="border:0" allowfullscreen=""></iframe>
           <div class="contacts__container container"></div>
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
             <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Map">
           </picture>
