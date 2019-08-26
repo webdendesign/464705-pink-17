@@ -12,7 +12,7 @@
 .advantages__slogan {
   margin: 0;
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 300;
   line-height: auto;
   text-align: center;
 }
@@ -21,27 +21,30 @@
   margin-bottom: 30px;
 }
 
-.advantages__main {
-  background-color: @bg-light;
+.advantages__slogan {
+  padding: 0 30px;
 }
 
-.advantages__container {
+.advantages__main {
   position: relative;
-  padding-top: 85px;
   background-color: @bg-light;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -800px;
-    width: 1200px;
-    height: 94px;
-
-    background-image: url("../img/bg-triangle-white.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    border-top: 10vh solid #ffffff;
+    border-right: 100vw solid transparent;
   }
+}
+
+.advantages__container {
+  position: relative;
+  padding-top: 85px;
+  background-color: @bg-light;
 }
 
 .advantages__list {
@@ -103,13 +106,21 @@
     font-size: 40px;
   }
 
+  .advantages__slogan {
+    padding: 0 120px;
+  }
+
+  .advantages__main {
+    background-color: @bg-light;
+
+    // &::before {
+    //   left: -500px;
+    // }
+  }
+
   .advantages__container {
     position: relative;
     padding-top: 40px;
-
-    &::before {
-      left: -500px;
-    }
   }
 
   .advantages__list {
@@ -155,14 +166,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__main {
+    background-color: @bg-light;
+
+    &::before {
+      border-top: 23vh solid #ffffff;
+      border-right: 100vw solid transparent
+    }
+  }
+
   .advantages__container {
     position: relative;
     padding-top: 0;
     padding-bottom: 63px;
-
-    &::before {
-      left: 0;
-    }
   }
 
   .advantages__header {
@@ -171,13 +187,13 @@
   }
 
   .advantages__slogan {
+    padding: 0 180px;
     line-height: 59px;
   }
 
   .advantages__intro,
   .advantages__slogan {
     font-size: 50px;
-    font-weight: lighter;
   }
 
   .advantages__main {
@@ -199,10 +215,11 @@
     padding-top: 358px;
 
     &--street::before {
+      z-index: 3;
       content: "";
       position: absolute;
       top: 0;
-      left: -2px;
+      left: 3px;
       width: 292px;
       height: 302px;
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
@@ -215,7 +232,12 @@
       }
     }
 
+    &--garage {
+      margin: 0 15px;
+    }
+
     &--garage::before {
+      z-index: 3;
       content: "";
       position: absolute;
       top: 0;
@@ -233,10 +255,11 @@
     }
 
     &--smile::before {
+      z-index: 3;
       content: "";
       position: absolute;
       top: 0;
-      left: 15px;
+      left: 10px;
       width: 292px;
       height: 302px;
       background-image: url("../img/iphone-screen-3-desktop@1x.png");

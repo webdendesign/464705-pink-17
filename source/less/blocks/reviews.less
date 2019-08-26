@@ -25,6 +25,7 @@
 }
 
 .reviews__intro {
+  margin: 0;
   padding-top: 100px;
   font-size: 24px;
   color: @bg-white;
@@ -100,35 +101,73 @@
 }
 
 .reviews__container {
-  position: relative;
   margin-top: -3px;
   margin-bottom: 20px;
 }
 
 .reviews__description-panorama {
+  display: flex;
+  flex-direction: column;
   margin-top: -1px;
-  padding: 17px 17px;
+  padding: 17px 17px 20px;
   background-color: @bg-light;
+}
+
+.reviews__text-promo {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.reviews__like-promo {
+  position: relative;
+  margin: 0;
+  padding-left: 32px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @cl-red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .reviews__description {
-  min-height: 80px;
+  display: flex;
+  flex-direction: column;
   margin-top: -4px;
-  padding: 18px 18px 17px;
+  padding: 18px 18px 21px;
   background-color: @bg-light;
 }
 
+.reviews__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .reviews__author-name {
-  display: inline;
   margin: 0;
+  margin-right: 5px;
   font-size: 14px;
   line-height: 24px;
-  font-weight: bold;
-  color: #283645;
+  font-weight: 700;
+  color: @bg-dark;
 }
 
 .reviews__time {
-  display: inline;
   font-size: 12px;
   line-height: 24px;
   font-weight: 300;
@@ -137,18 +176,18 @@
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
 }
 
 .reviews__like {
-  position: absolute;
-  bottom: 25px;
+  position: relative;
   margin: 0;
   padding-left: 32px;
   font-size: 12px;
+  line-height: 24px;
   font-weight: 400;
   text-transform: uppercase;
   color: @cl-red;
@@ -156,7 +195,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 7px;
     left: 0;
     width: 13px;
     height: 12px;
@@ -209,11 +248,23 @@
   }
 
   .reviews__description-panorama {
-    padding: 23px 27px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 24px 27px;
   }
 
-  .reviews__description-panorama .reviews__text {
-    margin-bottom: 0;
+  .reviews__block--promo {
+    order: 1;
+  }
+
+  .reviews__like-promo {
+    order: 2;
+  }
+
+  .reviews__text-promo {
+    order: 3;
+    margin: 0;
   }
 
   .reviews__img-container {
@@ -249,42 +300,37 @@
   }
 
   .reviews__description {
-    min-height: 96px;
+    min-height: 106px;
+    display: flex;
     margin-top: -4px;
-    padding: 26px 27px;
+    padding: 25px 27px;
     width: 246px;
   }
 
   .reviews__text {
-    margin-bottom: 32px;
     font-size: 14px;
     line-height: 24px;
   }
 
+  .reviews__like-promo {
+    margin-bottom: 0;
+    padding: 0 32px 0 0;
+    align-items: auto;
+    align-self: end;
+
+    &::before {
+      top: 6px;
+      left: 105px;
+    }
+  }
+
   .reviews__like {
-    bottom: 27px;
-    margin: 0;
+    margin-top: auto;
     padding-left: 0;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
+      top: 7px;
       left: 230px;
-      width: 13px;
-      height: 12px;
-      background-image: url("../img/icon-heart.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
-
-    &--right {
-      top: 30px;
-      right: 80px;
-    }
-
-    &--right::before {
-      left: 108px;
     }
   }
 
@@ -310,7 +356,8 @@
   }
 
   .reviews__intro {
-    padding-top: 175px;
+    margin: 0;
+    padding: 173px 180px 0;
   }
 
   .reviews__slogan {
@@ -331,7 +378,7 @@
   }
 
   .reviews__description-panorama {
-    padding: 24px 27px;
+    padding: 23px 27px;
   }
 
   .reviews__list {
@@ -349,23 +396,20 @@
     height: 400px;
   }
 
-  .reviews__description {
-    min-height: 102px;
-  }
-
   .reviews__text {
+    margin-bottom: 10px;
     padding: 0;
     font-size: 14px;
     line-height: 24px;
   }
 
-  .reviews__like--right {
-    top: 30px;
-    right: 190px;
-
+  .reviews__like {
+    margin-bottom: 0;
+    padding: 0 30px 0 0;
 
     &::before {
-      left: 105px;
+      top: 6px;
+      left: 230px;
     }
   }
 }

@@ -4,7 +4,7 @@
 }
 
 .filter__header {
-  padding: 43px 0;
+  padding: 42px 0;
   background-color: @bg-white;
 }
 
@@ -12,6 +12,16 @@
   margin: 0;
   padding: 0;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.filter__intro {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 30px;
   text-align: center;
 }
@@ -34,8 +44,8 @@
   list-style: none;
 }
 
-.filter__range--fill,
-.filter__range--contrast {
+.filter__range-controls--fill,
+.filter__range-controls--contrast {
   display: none;
 }
 
@@ -96,7 +106,7 @@
   fill: @cl-red;
 }
 
-.filter__range--crop {
+.filter__range-controls--crop {
   position: relative;
 }
 
@@ -132,7 +142,7 @@
   }
 }
 
-.filter__range--active {
+.filter__range-toggle--active {
   background: @cl-red;
 }
 
@@ -195,10 +205,11 @@
   }
 
   .filter__header {
-    padding: 73px 0 70px;
+    padding: 65px 0 70px;
   }
 
-  .filter__slogan {
+  .filter__slogan,
+  .filter__intro {
     font-size: 18px;
   }
 
@@ -231,8 +242,8 @@
     padding: 0;
   }
 
-  .filter__range--fill,
-  .filter__range--contrast {
+  .filter__range-controls--fill,
+  .filter__range-controls--contrast {
     display: inline-block;
     position: relative;
   }
@@ -277,32 +288,32 @@
     width: 202px;
   }
 
-  .filter__range--crop .filter__scale {
+  .filter__range-controls--crop .filter__scale {
     top: 12px;
     left: 35px;
   }
 
-  .filter__range--crop .filter__range-toggle {
+  .filter__range-controls--crop .filter__range-toggle {
     top: 6px;
     left: 190px;
   }
 
-  .filter__range--fill .filter__scale {
+  .filter__range-controls--fill .filter__scale {
     top: 11px;
     left: 36px;
   }
 
-  .filter__range--fill .filter__range-toggle {
+  .filter__range-controls--fill .filter__range-toggle {
     top: 5px;
     left: 70px;
   }
 
-  .filter__range--contrast .filter__scale {
+  .filter__range-controls--contrast .filter__scale {
     left: 39px;
     top: 10px;
   }
 
-  .filter__range--contrast .filter__range-toggle {
+  .filter__range-controls--contrast .filter__range-toggle {
     top: 4px;
     left: 140px;
   }
@@ -319,7 +330,6 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .filter__wrapper {
     background-color: #ffffff;
@@ -327,7 +337,7 @@
   }
 
   .filter__header {
-    padding: 7px 0 65px 0;
+    padding: 5px 0 65px 0;
   }
 
   .filter__main {
@@ -375,32 +385,32 @@
     width: 288px;
   }
 
-  .filter__range--crop .filter__scale {
+  .filter__range-controls--crop .filter__scale {
     top: 22px;
     left: 45px;
   }
 
-  .filter__range--crop .filter__range-toggle {
+  .filter__range-controls--crop .filter__range-toggle {
     top: 16px;
     left: 115px;
   }
 
-  .filter__range--fill .filter__scale {
+  .filter__range-controls--fill .filter__scale {
     top: 22px;
     left: 45px;
   }
 
-  .filter__range--fill .filter__range-toggle {
+  .filter__range-controls--fill .filter__range-toggle {
     top: 16px;
     left: 290px;
   }
 
-  .filter__range--contrast .filter__scale {
+  .filter__range-controls--contrast .filter__scale {
     top: 34px;
     left: 54px;
   }
 
-  .filter__range--contrast .filter__range-toggle {
+  .filter__range-controls--contrast .filter__range-toggle {
     top: 28px;
     left: 215px;
   }
