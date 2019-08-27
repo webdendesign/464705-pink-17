@@ -3,22 +3,22 @@
   z-index: 3;
   overflow: hidden;
   background-color: @bg-light;
-}
-
-.select__container {
-  position: relative;
-  padding-top: 130px;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -400px;
-    width: 1200px;
-    height: 94px;
-    background-image: url("../img/bg-triangle-white.svg");
-    background-repeat: no-repeat;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    border-top: 10vh solid #ffffff;
+    border-right: 100vw solid transparent;
   }
+}
+
+.select__container {
+  position: relative;
+  padding-top: 130px;
 }
 
 .select__list {
@@ -150,13 +150,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .select__container {
-    padding-top: 102px;
-    padding-bottom: 70px;
-
+  .select {
     &::before {
-      left: -350px;
+      border-top: 10vh solid #ffffff;
+      border-right: 100vw solid transparent;
     }
+  }
+
+  .select__container {
+    padding-top: 82px;
+    padding-bottom: 70px;
   }
 
   .select__list {
@@ -251,16 +254,16 @@
 
 @media (min-width: @desktop-width) {
   .select {
-    position: relative;
+    &::before {
+      border-top: 21vh solid #ffffff;
+      border-right: 100vw solid transparent;
+    }
   }
 
   .select__container {
     padding-bottom: 95px;
     padding-top: 155px;
 
-    &::before {
-      left: 1px;
-    }
   }
 
   .select__one {

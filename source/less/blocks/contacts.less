@@ -28,6 +28,14 @@
   }
 }
 
+.contacts__intro {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  background-color: @bg-white;
+}
+
 .contacts__slogan {
   margin: 0;
   margin-bottom: 35px;
@@ -139,6 +147,11 @@
     }
   }
 
+  .contacts__intro {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
   .contacts__slogan {
     margin: 0 0 45px;
     font-size: 40px;
@@ -153,12 +166,19 @@
 
   .contacts__item {
     margin-bottom: 45px;
+
+    &--email {
+      margin-right: -18px;
+    }
   }
 
-  .contacts__phone,
   .contacts__email,
   .contacts__street {
     margin-top: 10px;
+  }
+
+  .contacts__phone {
+    margin-top: 5px
   }
 
   .contacts__map {
@@ -205,6 +225,11 @@
     }
   }
 
+  .contacts__intro {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
   .contacts__slogan {
     margin-bottom: 60px;
     font-size: 50px;
@@ -227,6 +252,7 @@
 
     &--email {
       order: 3;
+      margin-right: 0;
     }
 
     &--street {
