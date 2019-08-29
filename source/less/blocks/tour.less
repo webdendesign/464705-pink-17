@@ -178,7 +178,6 @@
 }
 
 .tour__journey {
-  margin-top: 45px;
   margin-bottom: 45px;
 }
 
@@ -301,25 +300,24 @@
 }
 
 .tour__emotion {
-  margin-bottom: 45px;
+  margin-bottom: 47px;
   padding-top: 38px;
 }
 
 .tour__write {
-  margin-top: 35px;
   margin-bottom: 16px;
 }
 
 .tour__emotion textarea {
   padding: 15px 17px 25px;
   width: 239px;
-  height: 157px;
+  height: 160px;
   border: 2px solid @bg-light;
   font-size: 18px;
   line-height: 30px;
 
   &:focus {
-    outline: 3px solid pink;
+    border-color: @cl-red;
   }
 }
 
@@ -364,6 +362,12 @@
   height: 63px;
   border-radius: 2px;
   border: 2px solid #2aab6d;
+
+  &:disabled:not(focus) {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #ffffff;
+  }
 }
 
 .tour__legend {
@@ -529,7 +533,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 50px;
-    margin-top: 65px;
+    margin-top: 70px;
   }
 
   .tour__people-item {
@@ -590,7 +594,7 @@
   .tour__contact-address {
     display: block;
     margin: auto;
-    margin-bottom: 31px;
+    margin-bottom: 35px;
     padding: 0 30px;
     font-size: 14px;
     line-height: 30px;
@@ -938,7 +942,7 @@
 
   .tour__send {
     text-align: center;
-    margin-top: 65px;
+    margin-top: 70px;
   }
 
   .tour__legend {

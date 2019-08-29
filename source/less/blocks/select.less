@@ -1,6 +1,7 @@
 .select {
   position: relative;
   z-index: 3;
+  padding-top: 30px;
   overflow: hidden;
   background-color: @bg-light;
 
@@ -11,14 +12,14 @@
     width: 0;
     height: 0;
     z-index: 2;
-    border-top: 10vh solid #ffffff;
+    border-top: 5vh solid #ffffff;
     border-right: 100vw solid transparent;
   }
 }
 
 .select__container {
   position: relative;
-  padding-top: 130px;
+  padding-top: 67px;
 }
 
 .select__list {
@@ -152,13 +153,13 @@
 @media (min-width: @tablet-width) {
   .select {
     &::before {
-      border-top: 10vh solid #ffffff;
+      border-top: 7vh solid #ffffff;
       border-right: 100vw solid transparent;
     }
   }
 
   .select__container {
-    padding-top: 82px;
+    padding-top: 54px;
     padding-bottom: 70px;
   }
 
@@ -262,8 +263,7 @@
 
   .select__container {
     padding-bottom: 95px;
-    padding-top: 155px;
-
+    padding-top: 123px;
   }
 
   .select__one {
