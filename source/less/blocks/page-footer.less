@@ -13,10 +13,6 @@
   padding: 20px 0;
 }
 
-.page-footer__desktop {
-  display: none;
-}
-
 .page-footer__logo {
   margin: 0 auto;
   width: 147px;
@@ -25,6 +21,10 @@
   &:focus {
     outline: 3px solid pink;
   }
+}
+
+.page-footer__desktop {
+  display: none;
 }
 
 .page-footer__logo svg {
@@ -134,16 +134,6 @@
   .page-footer__logo {
     margin-top: 66px;
     margin-right: 20px;
-
-    &:active .page-footer__desktop-text path {
-      fill: @bg-dark;
-      opacity: 0.2;
-    }
-
-    &:active .page-footer__desktop-glasses path {
-      fill: @cl-red;
-      opacity: 0.2;
-    }
   }
 
   .page-footer__mobile {
@@ -154,9 +144,22 @@
     display: block;
   }
 
+  .page-footer__desktop-text path {
+    fill: @bg-dark;
+  }
+
+  .page-footer__desktop:active .page-footer__desktop-glasses path {
+    opacity: 0.2;
+  }
+
+  .page-footer__desktop:active .page-footer__desktop-text path {
+    fill: @bg-dark;
+    opacity: 0.2;
+  }
+
   .page-footer__social {
     margin-top: 70px;
-    margin-right: 0;
+    margin-right: 10px;
   }
 
   .page-footer__copyright {

@@ -318,6 +318,7 @@
 
   &:focus {
     border-color: @cl-red;
+    outline: none;
   }
 }
 
@@ -499,7 +500,7 @@
 
   .tour__progress {
     order: 4;
-    margin-bottom: 62px;
+    margin-bottom: 55px;
     padding-top: 49px;
   }
 
@@ -532,8 +533,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 50px;
-    margin-top: 65px;
+    padding-bottom: 48px;
+    margin-top: 67px;
   }
 
   .tour__people-item {
@@ -591,6 +592,10 @@
     padding: 0;
   }
 
+  .tour__make li:last-child {
+    margin-bottom: 45px;
+  }
+
   .tour__contact-address {
     display: block;
     margin: auto;
@@ -607,7 +612,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 
     &::before {
       position: absolute;
@@ -632,7 +637,7 @@
     &--mail::after {
       position: absolute;
       content: "";
-      top: 22px;
+      top: 24px;
       right: 20px;
       width: 18px;
       height: 14px;
@@ -653,12 +658,12 @@
   }
 
   .tour__container-emotion {
-    padding-bottom: 50px;
+    padding-bottom: 48px;
   }
 
   .tour__emotion textarea {
     width: 463px;
-    height: 149px;
+    height: 150px;
     border: 2px solid @bg-light;
   }
 
@@ -682,11 +687,16 @@
     line-height: 30px;
     color: @cl-red;
     text-transform: uppercase;
+
+    &--progress {
+      padding: 0 30px;
+    }
   }
 
   .tour__write {
     margin-top: 0;
     margin-bottom: 37px;
+    padding: 0 40px;
   }
 
   .tour__btn--send {
@@ -769,6 +779,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: cover;
     }
   }
 
@@ -823,7 +834,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   .tour__make-item {
@@ -905,7 +916,7 @@
   }
 
   .tour__container-emotion {
-    padding-bottom: 40px;
+    padding-bottom: 42px;
   }
 
   .tour__write {
@@ -914,7 +925,7 @@
 
   .tour__emotion textarea {
     width: 784px;
-    height: 84px;
+    height: 85px;
   }
 
   .tour__man,
@@ -942,7 +953,7 @@
 
   .tour__send {
     text-align: center;
-    margin-top: 67px;
+    margin-top: 65px;
   }
 
   .tour__legend {
